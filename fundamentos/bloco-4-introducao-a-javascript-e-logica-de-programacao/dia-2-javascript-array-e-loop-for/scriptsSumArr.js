@@ -5,3 +5,5 @@ for(let i = 0; i < numbers.length; i += 1){
     soma += numbers[i]
 }
 console.log(soma);
+
+//O console.log deve ficar fora do For, para dar apenas o resultado final.//
