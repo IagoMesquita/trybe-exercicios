@@ -1,0 +1,50 @@
+.Fundo{
+    background-color:yellow;
+    }
+.impar{
+    color:green;
+}
+.par{
+    text-transform:uppercase;
+}
+
+h1, h3{
+    color:red
+}
+h1 em{
+    font: size 40px;
+    border:black 1px solid;
+}
+li{
+    font-size:20px;
+}
+li em{
+    font-weight: 700;
+}
+
+.fontelist{
+    color:blue
+}
+.java{
+    background-color:pink;
+}
+
+ .negrito-link li:hover{
+     font-weight:700;
+ }
+
+ .negrito-link .stack:hover{
+     color:orange;
+ }
+ .negrito-link .w3:hover{
+     color:green;
+ }
+ .negrito-link .mdn:hover{
+     color:black
+ }
+ .negrito-link .dev:hover{
+     color:yellow
+ }
+ .negrito-link .trybe:hover{
+     color:green;
+ }

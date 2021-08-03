@@ -1,0 +1,15 @@
+h1, p{
+    text-align: center;
+}
+
+ol li:hover{
+background-color: cornflowerblue;
+color:white;
+font-weight: 700;
+}
+ol li:active{
+    color:gray;
+}
+ul{
+    margin: left 15px;;
+}
