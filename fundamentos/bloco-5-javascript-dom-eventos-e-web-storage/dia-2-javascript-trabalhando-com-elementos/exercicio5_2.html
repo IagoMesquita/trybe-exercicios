@@ -87,14 +87,26 @@
      imagemPequena.src = 'https://picsum.photos/200';
      leftSection.appendChild(imagemPequena);
 
-     let listaDesordenada = document.createElement('ul')
+     
+     
+     let listNordenada = document.createElement('ul');
+     rightSection.appendChild(listNordenada);
+     let porExtenso = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+
+     for(let i = 0; i < porExtenso.length; i += 1 ){       //<-- Poderia ser um  for/in //
+       let listExtenso = porExtenso[i];
+       let liDesordenada = document.createElement('li');
+       liDesordenada.innerText = listExtenso;
+
+       listNordenada.appendChild(liDesordenada);
+     }
+    
+     for(let i = 1; i < 4; i += 1){
+     let threeH = document.createElement('h3');
+     contentMain.appendChild(threeH);
+    }
 
 
-
-
-
-
-         
     </script>
   </body>
 </html>
