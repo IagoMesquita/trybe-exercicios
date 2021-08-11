@@ -57,8 +57,9 @@
   </head>
   <body>
     <script>
-     
+     //PARTE I
      let hH1 = document.createElement('h1'); 
+     hH1.className = "title"; //<-- Parte II. Q1
      hH1.innerText = "Exercicio 5.2 - JavaScript DOM";
      document.body.appendChild(hH1);
 
@@ -93,18 +94,42 @@
      rightSection.appendChild(listNordenada);
      let porExtenso = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
 
-     for(let i = 0; i < porExtenso.length; i += 1 ){       //<-- Poderia ser um  for/in //
+     for(let i = 0; i < porExtenso.length; i += 1 ){       //<-- Poderia ser um  for/in 
        let listExtenso = porExtenso[i];
        let liDesordenada = document.createElement('li');
        liDesordenada.innerText = listExtenso;
-
+      //  liDesordenada.className = "lista-numeros";   //<--- Parte II, Q6
        listNordenada.appendChild(liDesordenada);
      }
     
      for(let i = 1; i < 4; i += 1){
      let threeH = document.createElement('h3');
+     threeH.className = "description"; //<-- Parte II. Q2
      contentMain.appendChild(threeH);
     }
+    
+    //Parte II
+    contentMain.removeChild(leftSection);
+    
+    rightSection.style.margin = 'auto';
+
+    contentMain.style.background = 'green';
+
+    listNordenada.lastChild.remove();
+    listNordenada.lastChild.remore();
+
+    
+    // let liDesordenada = document.querySelectorAll('.lista-numeros');
+    // for( let i = 0; i < liDesordenada.length; i += 1){
+    //   let element = liDesordenada[i];
+      
+    //   if(element.innerText.includes('nove' || 'dez')){
+    //     liDesordenada.removeChild(element);
+    //   }
+
+
+    // }
+
 
 
     </script>
