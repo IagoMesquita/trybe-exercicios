@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+     //PARTE I
+     let hH1 = document.createElement('h1'); 
+     hH1.className = "title"; //<-- Parte II. Q1
+     hH1.innerText = "Exercicio 5.2 - JavaScript DOM";
+     document.body.appendChild(hH1);
+
+     let contentMain = document.createElement('main');
+     contentMain.className = 'main-content';
+     document.body.appendChild(contentMain);
+
+     let centerSection = document.createElement('section');
+     centerSection.className = "center-content";
+     contentMain.appendChild(centerSection);
+
+     let paragrafh = document.createElement('p');
+     paragrafh.innerText = "Olá, mundo!"
+     centerSection.appendChild(paragrafh);
+
+     let leftSection = document.createElement('section');
+     leftSection.className = "left-content";
+     contentMain.appendChild(leftSection);
+
+     let rightSection = document.createElement('section');
+     rightSection.className = "right-content";
+     contentMain.appendChild(rightSection);
+
+     let imagemPequena = document.createElement('img');
+     imagemPequena.className = "small-image";
+     imagemPequena.src = 'https://picsum.photos/200';
+     leftSection.appendChild(imagemPequena);
+
+     
+     
+     let listNordenada = document.createElement('ul');
+     rightSection.appendChild(listNordenada);
+     let porExtenso = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+
+     for(let i = 0; i < porExtenso.length; i += 1 ){       //<-- Poderia ser um  for/in 
+       let listExtenso = porExtenso[i];
+       let liDesordenada = document.createElement('li');
+       liDesordenada.innerText = listExtenso;
+      //  liDesordenada.className = "lista-numeros";   //<--- Parte II, Q6
+       listNordenada.appendChild(liDesordenada);
+     }
+    
+     for(let i = 1; i < 4; i += 1){
+     let threeH = document.createElement('h3');
+     threeH.className = "description"; //<-- Parte II. Q2
+     contentMain.appendChild(threeH);
+    }
+    
+    //Parte II
+    contentMain.removeChild(leftSection);
+    
+    rightSection.style.margin = 'auto';
+
+    contentMain.style.background = 'green';
+
+    listNordenada.lastChild.remove();
+    listNordenada.lastChild.remore();
+
+    
+    // let liDesordenada = document.querySelectorAll('.lista-numeros');
+    // for( let i = 0; i < liDesordenada.length; i += 1){
+    //   let element = liDesordenada[i];
+      
+    //   if(element.innerText.includes('nove' || 'dez')){
+    //     liDesordenada.removeChild(element);
+    //   }
+
+
+    // }
+
+
+
+    </script>
+  </body>
+</html>
