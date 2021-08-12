@@ -35,7 +35,15 @@ function createDaysOfMonths() {
       daysMonthsUl.appendChild(daysMonthsList);
     
     }
-
 }
-
   createDaysOfMonths();
+
+function createButtonFriday(nameB){  
+ const botãoFriday = document.createElement('button');
+ botãoFriday.id = 'btn-holiday';
+ botãoFriday.innerHTML= nameB;
+ const divButtonContainer = document.querySelector('.buttons-container');
+  
+ divButtonContainer.appendChild(botãoFriday); 
+}
+createButtonFriday('Feriadisss');
