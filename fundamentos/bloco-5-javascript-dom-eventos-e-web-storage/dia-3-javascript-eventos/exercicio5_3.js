@@ -21,14 +21,21 @@ function createDaysOfMonths() {
       const days = dezDaysList[i];
       const daysMonthsList = document.createElement('li');
       daysMonthsList.className = 'day';
+      if(days === 24 || days === 31){
+         daysMonthsList.className = 'day holiday';
+      }
+      else if(days === 4 || days === 11 || days === 18){
+          daysMonthsList.className = ' day friday';
+      }  
+      else if(days === 25){
+          daysMonthsList.className = ' day friday holiday'
+      }
       daysMonthsList.innerHTML = days;
       
       daysMonthsUl.appendChild(daysMonthsList);
+    
     }
+
 }
 
   createDaysOfMonths();
-
-  
-
-  
