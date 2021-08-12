@@ -10,7 +10,7 @@ function createDaysOfTheWeek() {
       weekDaysList.appendChild(dayListItem);
     };
   };
-  
+  //Exercicio 1
   createDaysOfTheWeek();
   
 function createDaysOfMonths() {
@@ -37,7 +37,7 @@ function createDaysOfMonths() {
     }
 }
   createDaysOfMonths();
-
+//Exercicio 2
 function createButtonFriday(nameB){  
  const botãoFriday = document.createElement('button');
  botãoFriday.id = 'btn-holiday';
@@ -47,3 +47,16 @@ function createButtonFriday(nameB){
  divButtonContainer.appendChild(botãoFriday); 
 }
 createButtonFriday('Feriadisss');
+
+//Exercicio 3
+clickFriday.addEventListener('click', clickFeriado);
+function clickFeriado(){
+const clickFriday = document.querySelector('#btn-holiday');
+const holiDay = document.querySelectorAll('.holiday');
+holiDay.style.background = "gray";
+
+
+
+
+}
+clickFeriado();
