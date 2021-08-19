@@ -9,12 +9,17 @@
 </head>
 
 <body>
+    <header class="form-header">
+        <h1>Formulário para cadastro de currículo</h1>
+        <p>Preencha os campos abaixo.</p>
+    </header>
+    <main>
     <form action="" method="get">
-        <fieldset>
-            <legend>Informações Pessoais</legend>
+        <fieldset><br>
+           <legend>Informações Pessoais</legend>
             <label for="nome">Nome:</label>
             <input type="text" id="nome" required>
-            <br><br>
+             <br><br>           
             <label for="inputemail">E-mail:</label>
             <input type="email" id="inputemail" required>
             <br><br>
@@ -65,10 +70,25 @@
             <input type="radio" value="apartamento" name="apt" id="apt" required>
         </fieldset>
         <fieldset>
-         <legend>Resumo do currículo</legend>
-         <textarea name="remuso" id="resumo" cols="50" rows="10"></textarea>
+            <legend>Resumo do currículo</legend>
+            <textarea name="remuso" id="resumo" cols="50" rows="10"></textarea>
+            <div>
+            <label for="cargo">Cargo</label>
+             <input type="text"  name="cargo" id="cargo" required>
+            </div>
+            <div>
+             <label for="descricao">Descrição do Cargo</label>
+             <input type="text"  name="descricao" id="descricao" required>
+            </div>
+            <div>
+                <label for="inici">Data de início</label>
+                <input type="date"  name="inicio" id="inicio" required>
+            </div>
+            <button type="submit" id="botao">Enviar</button>
         </fieldset>
     </form>
+</main>
+<script src="script.js"></script>
 </body>
 
 </html>
