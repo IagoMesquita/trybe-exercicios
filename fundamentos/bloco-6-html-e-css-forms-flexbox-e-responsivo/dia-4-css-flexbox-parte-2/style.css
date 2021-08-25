@@ -52,7 +52,9 @@ body {
   display: flex;
   flex-direction: column;
   flex-basis: 700px; /* < -- P2 Q3*/
+  flex-grow: 10; /* < -- P2 Q4*/
 }
+
 
 .movie-container h2 {
   margin: 40px 0;
@@ -63,6 +65,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  
  }
 
 .card-container div {
@@ -74,6 +77,7 @@ body {
   justify-content: center;
   margin: 10px;
   flex-basis: 16%; /* < -- P2 Q3*/
+  flex-grow: 1; /* < -- P2 Q5*/
 }
 
 .aside-container {
