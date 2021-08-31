@@ -26,3 +26,7 @@ console.log(addTurno(lesson2, 'turno', 'noite'));
 
 const listKeys = (object) =>  Object.keys(object);  //Q2
 console.log(listKeys(lesson3));
+
+const sizeObject = (object) => Object.entries(object).length; //Q3
+console.log(`O objeto tem tamanho ${sizeObject(lesson1)}.`);
+
