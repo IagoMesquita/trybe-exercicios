@@ -41,12 +41,15 @@ const order = {
     const endereço = `R. ${order.address.street}, Nº: ${order.address.number}, AP: ${order.address.apartment}`;
     console.log(`Olá ${entregador}, entrega para: ${cliente}, Telefone: ${foneCliente}, ${endereço}.`);
  }
-//   "Olá Ana Silveira, entrega para: Rafael Andrade, Telefone: 11-98763-1416, R. Rua das Flores, Nº: 389, AP: 701".
+
   customerInfo(order);
   
-//   const orderModifier = (order) => {
-//     // Adicione abaixo as informações necessárias.
+  const orderModifier = (order) => {
+    const cliente = order.name = "Luiz Silva";                                                       //Como Object.keys devolve um array
+    const pizzas = `${Object.keys(order.order.pizza)[0]}, ${Object.keys(order.order.pizza)[1]} `;    //acessamos através do índece.  
+    const bebida = order.order.drinks.coke.type;
+    const pagamento = order.payment.total = 50;    
+    console.log(`Olá ${cliente}, o total do seu pedido de ${pizzas} e ${bebida} é R$${pagamento},00.`);
+ }
   
-//   }
-  
-//   orderModifier(order);
+  orderModifier(order);
