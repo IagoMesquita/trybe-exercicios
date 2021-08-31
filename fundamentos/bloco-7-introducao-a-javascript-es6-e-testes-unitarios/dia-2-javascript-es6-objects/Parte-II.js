@@ -18,19 +18,22 @@ const lesson3 = {
   turno: 'noite',
 };
 
-const addTurno = (object, key, value) => {              //Q.1
-  object[key] = value;
-  return lesson2
-}
-console.log(addTurno(lesson2, 'turno', 'noite'));
+// const addTurno = (object, key, value) => {              //Q.1
+//   object[key] = value;
+//   return lesson2
+// }
+// console.log(addTurno(lesson2, 'turno', 'noite'));
 
-const listKeys = (object) =>  Object.keys(object);  //Q2
-console.log(`Lista das chaves do objeto: 
-[${listKeys(lesson3)}].`);
+// const listKeys = (object) =>  Object.keys(object);  //Q2
+// console.log(`Lista das chaves do objeto: 
+// [${listKeys(lesson3)}].`);
 
-const sizeObject = (object) => Object.entries(object).length; //Q3
-console.log(`O objeto tem tamanho: ${sizeObject(lesson1)}.`);
+// const sizeObject = (object) => Object.entries(object).length; //Q3
+// console.log(`O objeto tem tamanho: ${sizeObject(lesson1)}.`);
 
-const listValue = (object) =>  Object.values(object);  //Q4
-console.log(`Lista dos valores das chaves do objeto: 
-[${listValue(lesson3)}].`);
+// const listValue = (object) =>  Object.values(object);  //Q4
+// console.log(`Lista dos valores das chaves do objeto: 
+// [${listValue(lesson3)}].`);
+
+const allLessons = Object.assign({}, {lesson1, lesson2, lesson3});  //Não havia conseguido, por não colocar as {} englobando os
+console.log(allLessons);                                            //os lessons. Ai entrava somente o lessons3. 
