@@ -18,8 +18,11 @@ const lesson3 = {
   turno: 'noite',
 };
 
-const addTurno = (object, key, value) => {
+const addTurno = (object, key, value) => {              //Q.1
   object[key] = value;
   return lesson2
 }
 console.log(addTurno(lesson2, 'turno', 'noite'));
+
+const listKeys = (object) =>  Object.keys(object);  //Q2
+console.log(listKeys(lesson3));
