@@ -35,5 +35,14 @@ const lesson3 = {
 // console.log(`Lista dos valores das chaves do objeto: 
 // [${listValue(lesson3)}].`);
 
-const allLessons = Object.assign({}, {lesson1, lesson2, lesson3});  //Não havia conseguido, por não colocar as {} englobando os
-console.log(allLessons);                                            //os lessons. Ai entrava somente o lessons3. 
+const allLessons = Object.assign({}, {lesson1, lesson2, lesson3}); //Q5 //Não havia conseguido, por não colocar as {} englobando os
+// console.log(allLessons);                                            //os lessons. Ai entrava somente o lessons3. 
+
+
+const totalAlunos = () => {  //Q6
+  const soma = allLessons.lesson1.numeroEstudantes + allLessons.lesson2.numeroEstudantes + allLessons.lesson3.numeroEstudantes;
+  console.log(`Total de estudantes é: ${soma}.`) 
+}
+totalAlunos();
+
+
