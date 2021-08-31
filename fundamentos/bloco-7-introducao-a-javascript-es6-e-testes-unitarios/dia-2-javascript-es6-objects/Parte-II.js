@@ -25,8 +25,12 @@ const addTurno = (object, key, value) => {              //Q.1
 console.log(addTurno(lesson2, 'turno', 'noite'));
 
 const listKeys = (object) =>  Object.keys(object);  //Q2
-console.log(listKeys(lesson3));
+console.log(`Lista das chaves do objeto: 
+[${listKeys(lesson3)}].`);
 
 const sizeObject = (object) => Object.entries(object).length; //Q3
-console.log(`O objeto tem tamanho ${sizeObject(lesson1)}.`);
+console.log(`O objeto tem tamanho: ${sizeObject(lesson1)}.`);
 
+const listValue = (object) =>  Object.values(object);  //Q4
+console.log(`Lista dos valores das chaves do objeto: 
+[${listValue(lesson3)}].`);
