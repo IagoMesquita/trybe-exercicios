@@ -46,31 +46,29 @@ const allLessons = Object.assign({}, {lesson1, lesson2, lesson3}); //Q5 //Não h
 // totalAlunos();
 
 //Q6 - Resolução por Isaac - Usando FOR: 
-function getStudentsTotal(lessons){
-  const keys = Object.keys(lessons);
-  let total = 0;
+// function getStudentsTotal(lessons){
+//   const keys = Object.keys(lessons);
+//   let total = 0;
 
-  for(let index = 0; index < keys.length; index += ''){
-    const currentKey = keys[index];
-    total += lessons[currentKey].numeroEstudantes;  //[indeterminado].determinado
-  }
- return total
-}
-console.log(getStudentsTotal(allLessons));
+//   for(let index = 0; index < keys.length; index += ''){
+//     const currentKey = keys[index];
+//     total += lessons[currentKey].numeroEstudantes;  //[indeterminado].determinado
+//   }
+//  return total
+// }
+// console.log(getStudentsTotal(allLessons));
 
 //Q6 - Gabarito - Usa For/In  -- Achei a melhor opção!!
-const getNumberOfStudents = (obj) => {
-  let total = 0;
-  const array = Object.keys(obj);
-  for (index in array) {
-    total += obj[array[index]].numeroEstudantes;
-  }
-  return total;
-};
-console.log(getNumberOfStudents(allLessons));
-
-// const getValueByNumber = (object, position) => {
-//   for(let position of object) {s
-//   const value = object[position]
+// const getNumberOfStudents = (obj) => {
+//   let total = 0;
+//   const array = Object.keys(obj);
+//   for (index in array) {
+//     total += obj[array[index]].numeroEstudantes;
 //   }
-// }
+//   return total;
+// };
+// console.log(getNumberOfStudents(allLessons));
+
+
+const getValueByNumber = (objt, position)  => Object.values(objt)[position]; //Q7
+console.log(getValueByNumber(lesson1, 0));  
