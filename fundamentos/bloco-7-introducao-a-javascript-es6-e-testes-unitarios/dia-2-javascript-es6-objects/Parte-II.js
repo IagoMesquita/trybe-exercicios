@@ -39,10 +39,38 @@ const allLessons = Object.assign({}, {lesson1, lesson2, lesson3}); //Q5 //Não h
 // console.log(allLessons);                                            //os lessons. Ai entrava somente o lessons3. 
 
 
-const totalAlunos = () => {  //Q6
-  const soma = allLessons.lesson1.numeroEstudantes + allLessons.lesson2.numeroEstudantes + allLessons.lesson3.numeroEstudantes;
-  console.log(`Total de estudantes é: ${soma}.`) 
+// const totalAlunos = () => {  //Q6
+//   const soma = allLessons.lesson1.numeroEstudantes + allLessons.lesson2.numeroEstudantes + allLessons.lesson3.numeroEstudantes;
+//   console.log(`Total de estudantes é: ${soma}.`) 
+// }
+// totalAlunos();
+
+//Q6 - Resolução por Isaac - Usando FOR: 
+function getStudentsTotal(lessons){
+  const keys = Object.keys(lessons);
+  let total = 0;
+
+  for(let index = 0; index < keys.length; index += ''){
+    const currentKey = keys[index];
+    total += lessons[currentKey].numeroEstudantes;  //[indeterminado].determinado
+  }
+ return total
 }
-totalAlunos();
+console.log(getStudentsTotal(allLessons));
 
+//Q6 - Gabarito - Usa For/In  -- Achei a melhor opção!!
+const getNumberOfStudents = (obj) => {
+  let total = 0;
+  const array = Object.keys(obj);
+  for (index in array) {
+    total += obj[array[index]].numeroEstudantes;
+  }
+  return total;
+};
+console.log(getNumberOfStudents(allLessons));
 
+// const getValueByNumber = (object, position) => {
+//   for(let position of object) {s
+//   const value = object[position]
+//   }
+// }
