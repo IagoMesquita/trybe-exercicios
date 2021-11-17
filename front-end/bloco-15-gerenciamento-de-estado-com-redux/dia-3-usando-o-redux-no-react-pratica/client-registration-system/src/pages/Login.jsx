@@ -9,24 +9,26 @@ class Login extends React.Component {
             email: '',
             senha: '',
         }
+        this.handleChange = this.handleChange.bind(this)
     }
 
-    handleChange({target: { value, name }}) {
-        this.setState({ [name]: value});
+    handleChange({ target }) {
+      const { name, value } = target;  
+      this.setState({ [name]: value});
     }
     
     render() {
         const { logged, login } = this.props;
         const { email, senha } = this.state;
-        return(
+        return( 
             <div>
                 <h1>Login</h1>
                 <form>
                     <label>
-                        <input value={ email } name="email" />
+                        <input value={ email } name="email" onChange={ this.handleChange }/>
                     </ label>
                     <label>
-                        <input value={ senha } name="senha" />
+                        <input value={ senha } name="senha" onChange={ this.handleChange }/>
                     </ label>
                     <button onClick={ login(email, senha) }>
                     Login
@@ -38,7 +40,7 @@ class Login extends React.Component {
 }
 
 const mapStateToProps = (state) => ({
-    logged: state.loginReducer.logged,
+    logged: state.loginReducer,
 });
 
 const mapDispatchToProps = (dispatch) => ({

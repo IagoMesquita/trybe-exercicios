@@ -1,26 +1,23 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import RenderClientesData from '../components/RenderClientsData';
 
 class ClientsData extends React.Component {
     render() {
-        const { loged, clients } = this.props;
+        const { loged, dataClients } = this.props;
         return( 
           !loged ? <p> Login não efetuado </p> : (
             <div>
-                {clients.length === 0 ? <p> Nenhum cliente cadastrado </p> : (
-                  <h1>Clientes Cadastrados</h1>
+                {dataClients.length === 0 ? <p> Nenhum cliente cadastrado </p> : (
+                  <RenderClientesData />
                 )}
-                <button><Link to="">Cadastre um cliente</Link></button>
+                <button><Link to="/register-client">Cadastre um cliente</Link></button>
             </div>
         )
         );
     }
 }
 
-ClientsData.propTypes = {
-  loged: PropTypes.bool.isRequired,
-  clients: PropTypes.arrayOf(PropTypes.object()).isRequired,
-};
+
 
 export default ClientsData;
