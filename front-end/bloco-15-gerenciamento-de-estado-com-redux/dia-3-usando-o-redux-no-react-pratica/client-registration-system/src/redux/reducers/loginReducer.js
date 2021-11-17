@@ -10,7 +10,7 @@ const loginReducer = (state = INITIAL_STATE, action) => {
   switch(action.type) {
     case LOGIN:
       const { email, senha } = action.payload;
-      const logged = (email === '123' && senha === '123');
+      const logged = (email === 123 && senha === 123);
       return ({
         ...state,
         email,

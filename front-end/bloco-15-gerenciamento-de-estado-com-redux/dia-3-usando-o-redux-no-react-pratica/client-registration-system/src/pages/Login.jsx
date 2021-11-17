@@ -39,12 +39,12 @@ class Login extends React.Component {
     }
 }
 
-const mapStateToProps = (state) => ({
-    logged: state.loginReducer,
-});
+// const mapStateToProps = (state) => ({
+//     logged: state.loginReducer,
+// });
 
 const mapDispatchToProps = (dispatch) => ({
     login: (email, senha) => dispatch(login(email, senha)),
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Login)
+export default connect(null, mapDispatchToProps)(Login)
