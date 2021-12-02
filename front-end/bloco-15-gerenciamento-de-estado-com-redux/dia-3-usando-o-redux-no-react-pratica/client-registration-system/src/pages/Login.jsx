@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { login } from '../redux/actions/actionsLogin';
+import { Redirect } from 'react-router-dom';
 
 class Login extends React.Component {
     constructor() {
@@ -20,31 +21,37 @@ class Login extends React.Component {
     render() {
         const { logged, login } = this.props;
         const { email, senha } = this.state;
-        return( 
+        return( logged ? <Redirect to="/clients-data" /> 
+        : (
             <div>
-                <h1>Login</h1>
-                <form>
-                    <label>
-                        <input value={ email } name="email" onChange={ this.handleChange }/>
-                    </ label>
-                    <label>
-                        <input value={ senha } name="senha" onChange={ this.handleChange }/>
-                    </ label>
-                    <button onClick={ login(email, senha) }>
-                    Login
-                    </ button>
-                </form>
-            </div>
+            <h1>Login</h1>
+            <form>
+                <label>
+                    <input value={ email } name="email" onChange={ this.handleChange }/>
+                </ label>
+                <label>
+                    <input value={ senha } name="senha" onChange={ this.handleChange }/>
+                </ label>
+                <button onClick={ (e) => {
+                    e.preventDefault()
+                    login(email, senha)
+                } }>
+                Login
+                </ button>
+            </form>
+        </div>
+        )
+           
         );
     }
 }
 
-// const mapStateToProps = (state) => ({
-//     logged: state.loginReducer,
-// });
+const mapStateToProps = (state) => ({
+    logged: state.loginReducer.logged,
+});
 
 const mapDispatchToProps = (dispatch) => ({
     login: (email, senha) => dispatch(login(email, senha)),
 })
 
-export default connect(null, mapDispatchToProps)(Login)
+export default connect(mapStateToProps, mapDispatchToProps)(Login)
