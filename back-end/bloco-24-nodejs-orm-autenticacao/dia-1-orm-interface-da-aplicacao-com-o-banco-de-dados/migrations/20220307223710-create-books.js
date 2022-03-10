@@ -2,11 +2,11 @@
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-    const TableBooks = await queryInterface.createTable('Books', {
+    await queryInterface.createTable('Books', {
       id: {
-        primaryKey: true,
-        autoIncrement: true,
         allowNull: false,
+        autoIncrement: true,
+        primaryKey: true,
         type: Sequelize.INTEGER
       },
       title: {
@@ -21,13 +21,16 @@ module.exports = {
         allowNull: false,
         type: Sequelize.INTEGER,
       },
-      createAt: {
+      createdAt: {  
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
+      updateAt: {  
         allowNull: false,
         type: Sequelize.DATE,
       }
     })
 
-    return TableBooks;
   },
 
   async down (queryInterface, _Sequelize) {
